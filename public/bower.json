@@ -16,6 +16,7 @@
   ],
   "dependencies": {
     "reveal.js": "~2.6.0",
-    "requirejs": "~2.1.9"
+    "requirejs": "~2.1.9",
+    "doT": "~1.0.1"
   }
 }

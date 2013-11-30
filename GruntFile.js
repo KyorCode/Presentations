@@ -2,6 +2,7 @@ module.exports = function(grunt) {
     "use strict";
 
     grunt.initConfig({
+        pkg : grunt.file.readJSON('package.json'),
         uglify: {
             options: {
                 banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' + '<%= grunt.template.today("yyyy-mm-dd") %> */',
@@ -21,7 +22,7 @@ module.exports = function(grunt) {
             }
         },
         jshint: {
-            files: ['src/**.js', 'public/app/**.js'],
+            files: ['src/**.js', 'public/app/**.js','public/presentations.js'],
             options: {
                 bitwise: false,
                 curly: true,
