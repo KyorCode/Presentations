@@ -19,7 +19,7 @@ function setup(config) {
     findIt.on('file', function(file) {
         var filename = path.basename(file);
         if (filename === 'routes.js') {
-            require(path.join('./' + path.relavite(__dirname, file))).init(app);
+            require('./' + path.relative(__dirname, file)).init(app);
         }
     });
 

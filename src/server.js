@@ -1,9 +1,9 @@
 var config = require('./config');
 var app = require('./bootstrap')(config).application;
 var expressSettings = config.expressSettings;
-var logger = require('.infrastructure/log');
+var logger = require('./infrastructure/log');
 
-app.lsten(expressSettings.port, expressSettings.ip, function(error) {
+app.listen(expressSettings.port, expressSettings.ip, function(error) {
     "use strict";
     if(error)    {
         logger.error("Unable to listen for connections.",error);
