@@ -1,6 +1,8 @@
 function getIndex(req, res) {
     var templateData = {
-        title: 'This should become a list!'
+        list: [{
+            name: "CQR"
+        }]
     };
     res.render('home/index.html', templateData);
 };

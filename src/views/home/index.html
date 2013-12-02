@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" context="IE=edge,chrome=1">
-    <title>Presentations</title>
-    <meta name="description" content="Presentations">
-    <meta name="viewport" content="width=device-width">
+    
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv="X-UA-Compatible" context="IE=edge,chrome=1">
+        <title>Presentations</title>
+        <meta name="description" content="Presentations">
+        <meta name="viewport" content="width=device-width">
+        <link rel="icon" type="image/ico" href="favicon.ico" />
+        <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+    </head>
+    
+    <body>
+        <ul>{{ for(var pres in it.list) { }}
+            <li>{{=pres.name}}</li>{{ } }}
+        </ul>
+        <script src="/lib/requirejs/require.js" type="application/javascript"></script>
+        <script src="/presentations.js" type="application/javascript"></script>
+        <script src="/lib/doT/doT.js" type="application/javascript"></script>
+    </body>
 
-    <link rel="icon" type="image/ico" href="favicon.ico" />
-    <link rel="stylesheet" type="text/css" href="css/styles.css" />
-
-</head>
-<body>
-
-<script src="lib/requirejs/require.js" type="application/javascript"></script>
-<script src="presentations.js" type="application/javascript"></script>
-<script src="lib/doT/doT.js" type="application/javascript"></script>
-</body> 
 </html>

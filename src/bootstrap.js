@@ -28,7 +28,7 @@ function setup(config) {
         app.use(middleware.exceptionInterceptors.clientExceptionInterceptor);
         app.use(middleware.exceptionInterceptors.globalExceptionInterceptor);
         app.use(middleware.exceptionInterceptors.notFoundExceptionInterceptor);
-        app.use(express.static(path.join(__dirname, '/public')));
+        app.use(express.static(path.resolve(__dirname + '../' + 'public')));
         app.use(app.router);
     });
 
